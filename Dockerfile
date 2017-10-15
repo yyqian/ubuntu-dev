@@ -5,4 +5,4 @@ RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y build-essential git vim curl
 RUN apt-get install -y python3-pip python3-dev python-virtualenv
 RUN pip3 install --upgrade tensorflow
-RUN mkdir ~/virtualenv && cd ~/virtualenv && virtualenv AI -p python3
+RUN mkdir ~/virtualenv && cd ~/virtualenv && virtualenv AI -p python3 --system-site-packages
