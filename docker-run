@@ -1,0 +1,4 @@
+docker build -t yyqian/ubuntu .
+docker run -it --rm yyqian/ubuntu bash
+docker rmi $(docker images -f "dangling=true" -q)
+pip3 install --upgrade tensorflow
