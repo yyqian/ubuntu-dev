@@ -9,4 +9,4 @@ alias c='cat'
 alias e='exit'
 alias v='vim'
 alias l='ls -Alh --time-style=long-iso --group-directories-first'
-source ~/virtualenv/AI/bin/activate
+#source ~/virtualenv/Stark/bin/activate
