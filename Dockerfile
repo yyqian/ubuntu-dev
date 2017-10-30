@@ -17,3 +17,9 @@ COPY container_files /
 RUN chmod 644 /root/.vimrc \
 && chmod 644 /root/.bash_profile \
 && echo "source /root/.bash_profile" >> /root/.bashrc
+
+RUN echo 'root:root' | chpasswd && mkdir -p /var/run/sshd && sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+
+RUN apt-get install -y cmake
+
+CMD bash -c '/usr/sbin/sshd -D'

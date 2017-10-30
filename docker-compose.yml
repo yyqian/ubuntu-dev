@@ -1,0 +1,6 @@
+version: '2'
+services:
+  ubuntu:
+    image: yyqian/ubuntu
+    ports:
+      - "1122:22"
